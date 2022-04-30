@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div>
+    <a class="navbar-brand" href="/flats">Simple Airbnb</a>
+    <div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <a class="btn btn-outline-primary my-2 my-sm-0 ms-2" href="/flats/new">Add Flat</a>
+    <div>
+  </div>
+</nav>
+
+<h1>All our Flats</h1>
+ <h4>All 3 flats.</h3>
+
+<div class="container">
+    <ul>
+      <% @flats.each do |flat| %>
+      <div class="row">
+        <li> <%= flat.name %> </li>
+      </div>
+      <% end %>
+    </ul>
+</div>
